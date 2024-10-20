@@ -1,27 +1,28 @@
 import * as React from 'react';
+import { NavLink } from 'react-router-dom';
 
 const Header = () => {
   return (
-    <div>
-      <nav className="navbar navbar-expand-lg bg-danger-subtle">
+    <header className="bg-danger-subtle">
+      <nav className="navbar navbar-expand-lg ">
         <div className="container">
-          <a className="navbar-brand" href="#">Нелли</a>
-          <div className="collapse navbar-collapse" id="navbarNav">
+          <NavLink className="text-black p-2 fs-4 text-decoration-none" to="/">Nelli-meow</NavLink>
+          <div className="collapse navbar-collapse justify-content-end" id="navbarNav">
             <ul className="navbar-nav">
               <li className="nav-item">
-                <a className="nav-link" aria-current="page" href="#">Home</a>
+                <NavLink className="text-black p-2 text-decoration-none" to="/home">Home</NavLink>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="#">About us</a>
+                <NavLink className="text-black p-2 text-decoration-none" to="/about">About us</NavLink>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="#">Contacts</a>
+                <NavLink className="text-black p-2 text-decoration-none" to="/contact">Contacts</NavLink>
               </li>
             </ul>
           </div>
         </div>
       </nav>
-    </div>
+    </header>
   );
 };
 
